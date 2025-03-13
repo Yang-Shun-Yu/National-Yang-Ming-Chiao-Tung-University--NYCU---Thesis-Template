@@ -1,0 +1,15 @@
+\begin{abstract}%
+
+As cities' intelligent transportation systems rapidly evolve, multi-camera vehicle tracking technology has become increasingly important in fields such as traffic monitoring, public safety, and urban planning. However, in some rural areas, surveillance systems often suffer from hardware limitations and poor network communication, resulting in extremely low update rates (e.g., only 1 frame per second) or even video freezing. Under these conditions, traditional high-frame-rate tracking methods struggle to maintain stability and accuracy. To address this issue, this thesis proposes a low-frame-rate multi-camera vehicle tracking method that integrates deep metric learning and motion prediction techniques.
+
+Firstly, this study compares two deep learning model architectures—Convolutional Neural Networks (CNNs) and Transformers—drawing design inspiration from A Strong Baseline and Batch Normalization Neck for Deep Person Re-identification and TransReID: Transformer-based Object Re-Identification, respectively. During the training phase, we simultaneously employ center loss, triplet loss, and cross entropy loss to enhance the model's ability to distinguish vehicle features. In the inference phase, the model extracts appearance features of vehicles, and matching is performed by computing the cosine similarity between feature vectors.
+
+Secondly, to address the challenges posed by low frame rates and discontinuous frames, this thesis introduces motion prediction methods using both simple linear prediction and Kalman filter prediction strategies. Based on the variations in vehicle positions observed in consecutive frames, the method predicts where a vehicle is likely to appear in the next frame and aids in vehicle re-identification by lowering the matching threshold.
+
+Furthermore, to further improve tracking accuracy, this thesis combines forward and reverse tracking strategies. Initially, vehicle tracking is conducted on individual surveillance cameras to classify identical vehicles; subsequently, these single-camera tracking results are used for cross-camera matching to identify instances of the same vehicle appearing on different surveillance feeds. Experimental results demonstrate that even under low-frame-rate and discontinuous conditions, the proposed method can maintain robust tracking performance and accuracy, thereby offering an effective solution for real-world traffic monitoring applications.
+
+\vspace{17cm}
+
+Keywords: Low Frame Rate, Multi-Camera Tracking, Deep Metric Learning, Vehicle Re-identification, Motion Prediction, Kalman Filter
+
+\end{abstract}
